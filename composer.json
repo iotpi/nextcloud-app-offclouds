@@ -1,0 +1,15 @@
+{
+    "name": "Off Clouds",
+    "description": "An iOS Backup Service",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Yang Hongbo"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>offclouds</id>
+    <name>Off Clouds</name>
+    <summary>An iOS Backup Service</summary>
+    <description><![CDATA[This is an iOS backup service]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="sprhawk@163.com" >Yang Hongbo</author>
+    <namespace>OffClouds</namespace>
+    <category>tools</category>
+    <bugs>https://iotpi.xyz</bugs>
+    <dependencies>
+        <nextcloud min-version="15" max-version="15"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Off Clouds</name>
+            <route>offclouds.page.index</route>
+        </navigation>
+    </navigations>
+</info>
