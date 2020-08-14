@@ -4,6 +4,7 @@ namespace OCA\OffClouds\Controller;
 use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Controller;
 
 class PageController extends Controller {
@@ -25,7 +26,13 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		return new TemplateResponse('offclouds', 'index');  // templates/index.php
+        // https://doc.owncloud.org/server/10.5/developer_manual/app/fundamentals/controllers.html
+        $csp = new ContentSecurityPolicy();
+        $csp->addAllowedConnectDomain("ws://127.0.0.1:8080/graphql");
+        
+		$response = new TemplateResponse('offclouds', 'index');  // templates/index.php
+        $response->setContentSecurityPolicy($csp);
+        return $response;
 	}
 
 }
